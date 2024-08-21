@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var dolphins = [96, 108, 89];
+    var koalas = [88, 91, 110];
+    var dolphins1 = [97, 112, 101];
+    var koalas1 = [109, 95, 123];
+    var dolphins2 = [97, 112, 101];
+    var koalas2 = [109, 95, 106];
+    // Calculate the average score for each team
+    var sumDolphins = 0;
+    var sumKoalas = 0;
+    var sumDolphins1 = 0;
+    var sumKoalas1 = 0;
+    var sumDolphins2 = 0;
+    var sumKoalas2 = 0;
+    for (var i = 0; i < dolphins.length; i++) {
+        sumDolphins += dolphins[i];
+        sumKoalas += koalas[i];
+    }
+    var avgDolphins = sumDolphins / dolphins.length;
+    var avgKoalas = sumKoalas / koalas.length;
+    for (var i = 0; i < dolphins1.length; i++) {
+        sumDolphins1 += dolphins1[i];
+        sumKoalas1 += koalas1[i];
+    }
+    var avgDolphins1 = sumDolphins1 / dolphins1.length;
+    var avgKoalas1 = sumKoalas1 / koalas1.length;
+    for (var i = 0; i < dolphins2.length; i++) {
+        sumDolphins2 += dolphins2[i];
+        sumKoalas2 += koalas2[i];
+    }
+    var avgDolphins2 = sumDolphins2 / dolphins2.length;
+    var avgKoalas2 = sumKoalas2 / koalas2.length;
+    // Compare the team's average scores to determine the winner of the competition, and print it to the console.
+    // The winner is the team with the highest average score and average score is at least 100.
+    console.log("Data 1: ");
+    if (avgDolphins > avgKoalas && avgDolphins >= 100) {
+        console.log("Dolphins win the competition");
+    } else if (avgKoalas > avgDolphins && avgKoalas >= 100) {
+        console.log("Koalas win the competition");
+    } else if (avgDolphins === avgKoalas && avgDolphins >= 100 && avgKoalas >= 100) {
+        console.log("Both teams win the competition");
+    } else {
+        console.log("No team wins the competition");
+    }
+    console.log("Data 2: ");
+    if (avgDolphins1 > avgKoalas1 && avgDolphins1 >= 100) {
+        console.log("Dolphins win the competition");
+    } else if (avgKoalas1 > avgDolphins1 && avgKoalas1 >= 100) {
+        console.log("Koalas win the competition");
+    } else if (avgDolphins1 === avgKoalas1 && avgDolphins1 >= 100 && avgKoalas1 >= 100) {
+        console.log("Both teams win the competition");
+    } else {
+        console.log("No team wins the competition");
+    }
+    console.log("Data 3: ");
+    if (avgDolphins2 > avgKoalas2 && avgDolphins2 >= 100) {
+        console.log("Dolphins win the competition");
+    } else if (avgKoalas2 > avgDolphins2 && avgKoalas2 >= 100) {
+        console.log("Koalas win the competition");
+    } else if (avgDolphins2 === avgKoalas2 && avgDolphins2 >= 100 && avgKoalas2 >= 100) {
+        console.log("Both teams win the competition");
+    } else {
+        console.log("No team wins the competition");
+    }
+</script>
+
+<body>
+</body>
+
+</html>
