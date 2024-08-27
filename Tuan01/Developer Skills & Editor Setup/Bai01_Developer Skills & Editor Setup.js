@@ -1,6 +1,6 @@
 // MSSV: 21014091
 // Ho va ten: Dang Bao Thong
-// Description: Coding Challenge #2
+// Description: Coding Challenge #1
 function printForecast(arr) {
     let str = '';
     for (let i = 0; i < arr.length; i++) {
