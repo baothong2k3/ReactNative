@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, FlatList, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
+import {
+  View,
+  Text,
+  FlatList,
+  TouchableOpacity,
+  ScrollView,
+  StyleSheet,
+} from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import Item1 from './Item1';
 import { fetchBikes } from './features/bikes/bikesSlice';
@@ -42,6 +49,13 @@ const ScreenListProduct = ({ navigation }) => {
             </Text>
           </TouchableOpacity>
         ))}
+        <TouchableOpacity
+          style={styles.buttonList}
+          onPress={() => navigation.navigate('AddBike')}>
+          <Text style={{ ...styles.textButtonList, color: '#beb6b6' }}>
+            Add Bike
+          </Text>
+        </TouchableOpacity>
       </View>
       <View style={styles.listContainer}>
         <FlatList
