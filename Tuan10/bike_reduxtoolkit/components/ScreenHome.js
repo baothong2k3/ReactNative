@@ -27,6 +27,11 @@ const ScreenHome = ({ navigation }) => {
         onPress={() => navigation.navigate('List')}>
         <Text style={{ ...styles.text1, color: '#FFFFFF' }}>Get Started</Text>
       </TouchableOpacity>
+      <TouchableOpacity
+        style={{...styles.buttonStart, backgroundColor: 'blue' }}
+        onPress={() => navigation.navigate('AddBike')}>
+        <Text style={{ ...styles.text1, color: '#FFFFFF' }}>Add Bike</Text>
+      </TouchableOpacity>
     </SafeAreaView>
   );
 };

@@ -5,6 +5,17 @@ export const fetchBikes = createAsyncThunk('bikes/fetchBikes', async () => {
   return response.json();
 });
 
+export const addBike = createAsyncThunk('bikes/addBike', async (newBike) => {
+  const response = await fetch('https://6717c890b910c6a6e029f784.mockapi.io/bike', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(newBike),
+  });
+  return response.json();
+});
+
 const bikesSlice = createSlice({
   name: 'bikes',
   initialState: {
@@ -23,6 +34,9 @@ const bikesSlice = createSlice({
       })
       .addCase(fetchBikes.rejected, (state) => {
         state.status = 'failed';
+      })
+      .addCase(addBike.fulfilled, (state, action) => {
+        state.items.push(action.payload);
       });
   },
 });

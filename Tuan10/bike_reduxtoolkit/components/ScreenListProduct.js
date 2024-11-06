@@ -1,16 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import {
-  View,
-  Text,
-  FlatList,
-  TouchableOpacity,
-  ScrollView,
-  StyleSheet,
-} from 'react-native';
+import { View, Text, FlatList, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import Item1 from './Item1';
 import { fetchBikes } from './features/bikes/bikesSlice';
-
 
 const ScreenListProduct = ({ navigation }) => {
   const dispatch = useDispatch();
@@ -31,11 +23,10 @@ const ScreenListProduct = ({ navigation }) => {
         : bikes.filter((item) => item.category === selectedCategory)
     );
   }, [selectedCategory, bikes]);
+
   return (
     <ScrollView>
       <Text style={styles.textHeaderList}>The world’s Best Bike</Text>
-
-      {/* Nút chọn loại xe */}
       <View style={styles.buttonContainer}>
         {['All', 'Roadbike', 'Mountain'].map((category) => (
           <TouchableOpacity
